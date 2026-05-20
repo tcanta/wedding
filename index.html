@@ -11,37 +11,6 @@
             box-sizing: border-box;
         }
 
-        @media (min-width: 750px) {
-            header {
-                height: 400px;
-                padding: 0;
-                span {
-                    font-size: 2.5em;
-                    font-weight: 600;
-                }
-            }
-            p {
-
-            }
-            
-            .tagline {
-                font-size: 1.3em;
-            }
-
-            .date-time {
-                font-size: 1.1em;
-            }
-        }
-
-        @media (min-width: 1082px) {
-            header {
-                span {
-                    font-size: 3.5em;
-                    font-weight: 700;
-                }
-            }
-        }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -69,14 +38,11 @@
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
                 animation: fadeInDown 0.8s ease;
             }
-            p {
-
-            }
         }
 
         .tagline {
             font-size: 3em;
-            margin-bottom: 20px;
+            margin: 20px 0;
             opacity: 0.95;
             animation: fadeInUp 0.8s ease 0.2s both;
         }
@@ -247,6 +213,34 @@
             border-radius: 8px;
         }
 
+        @media screen and (min-width: 1082px) {
+            header {
+                span {
+                    font-size: 3.5em;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        @media screen and (min-width: 750px) {
+            header {
+                height: 400px;
+                padding: 0;
+                span {
+                    font-size: 2.5em;
+                    font-weight: 600;
+                }
+            }
+            
+            .tagline {
+                font-size: 1.3em;
+            }
+
+            .date-time {
+                font-size: 1.1em;
+            }
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -277,29 +271,6 @@
                 transform: translateY(0);
             }
         }
-
-        /* @media (max-width: 768px) {
-            section {
-                padding: 25px;
-                margin-bottom: 20px;
-            }
-
-            .event-details {
-                grid-template-columns: 1fr;
-            }
-
-            .registry-links {
-                flex-direction: column;
-            }
-
-            .registry-link {
-                min-width: auto;
-            }
-
-            .modal-iframe {
-                height: 400px;
-            }
-        } */
     </style>
 </head>
 <body>
