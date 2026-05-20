@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notre Mariage</title>
     <style>
         * {
@@ -287,6 +287,12 @@
     </style>
 </head>
 <body>
+    <script>
+        var m = document.createElement('meta');
+        m.name = 'viewport';
+        m.content = 'width=device-width, initial-scale=1.0';
+        document.head.insertBefore(m, document.head.firstChild);
+    </script>
     <header>
         <img src="orchid-transparent.png" style="transform: scaleX(-1); position: relative; margin-left: -150px">
         <div style="position: relative; margin-left: -100px; margin-right: -100px;">
