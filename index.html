@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Notre Mariage</title>
     <style>
+        @viewport {
+            width: device-width;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -207,6 +211,7 @@
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             animation: fadeInDown 0.8s ease;
+            line-height: 1.2;
         }
         
         .tagline {
@@ -253,7 +258,7 @@
         }
 
         /* SMALL SCREENS */
-        @media screen and (max-width: 1082px) {
+        @media screen and (max-width: 1085px) {
             header span {
                 font-size: 2.5em;
                 font-weight: 600;
@@ -261,15 +266,13 @@
         }
 
         /* MOBILE */
-        @media only screen and (max-device-width: 750px) {
+        @media screen and (max-width: 750px) {
             header {
                 height: auto;
                 padding: 30px 0;
             }
             header span {
                 font-size: 5em;
-                font-weight: 700;
-                line-height: 1.2;
                 font-weight: 700;
             }
 
