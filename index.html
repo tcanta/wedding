@@ -238,6 +238,12 @@
             display: none;
         }
 
+        .header-text {
+            position: relative;
+            margin-left: -100px;
+            margin-right: -100px;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -319,6 +325,10 @@
             .event-details {
                 grid-template-columns: auto;
             }
+
+            .header-text {
+                margin: 0;
+            }
         }
     </style>
 </head>
@@ -332,7 +342,7 @@
     <header>
         <img src="orchid-transparent.png" class="first-image">
         <img src="orchid-transparent-mobile.png" class="first-image-mobile">
-        <div style="position: relative; margin-left: -100px; margin-right: -100px;">
+        <div class="header-text">
             <span>Mariage de Patricia & Thibaut</span>
             <p class="tagline">Rejoignez-nous pour célébrer notre union !</p>
             <p class="date-time">Samedi 19 et dimanche 20 Septembre 2026</p>
