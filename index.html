@@ -230,6 +230,14 @@
             position: relative; margin-right: -150px;
         }
 
+        .first-image-mobile {
+            display: hidden;
+        }
+
+        .second-image-mobile {
+            display: hidden;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -272,8 +280,7 @@
         /* MOBILE */
         @media screen and (max-width: 750px) {
             header {
-                height: auto;
-                padding: 30px 0;
+                height: 550px;
             }
             header span {
                 font-size: 2.5em;
@@ -289,11 +296,24 @@
             }
 
             .first-image {
-                transform: scaleX(-1); position: relative; margin-left: -200px;
+                display: hidden;
             }
 
             .second-image {
-                position: relative; margin-right: -200px;
+                display: hidden;
+            }
+
+            .first-image-mobile {
+                transform: scaleX(-1);
+                position: relative;
+                margin-left: -200px;
+                margin-top: -100px;
+            }
+
+            .second-image-mobile {
+                position: relative;
+                margin-right: -200px;
+                margin-top: -100px;
             }
 
             .event-details {
@@ -311,12 +331,14 @@
     </script>
     <header>
         <img src="orchid-transparent.png" class="first-image">
+        <img src="orchid-transparent-mobile.png" class="first-image-mobile">
         <div style="position: relative; margin-left: -100px; margin-right: -100px;">
-            <span>Mariage de Patricia et Thibaut</span>
+            <span>Mariage de Patricia & Thibaut</span>
             <p class="tagline">Rejoignez-nous pour célébrer notre union !</p>
             <p class="date-time">Samedi 19 et dimanche 20 Septembre 2026</p>
         </div>
         <img src="orchid-transparent.png" class="second-image">
+        <img src="orchid-transparent-mobile.png" class="second-image-mobile">
     </header>
 
     <main>
