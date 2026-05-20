@@ -15,6 +15,11 @@
             -webkit-text-size-adjust: 100%;
         }
 
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -198,16 +203,36 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            overflow: hidden;
-            height: 400px;
-            padding: 0;
+            overflow: visible;
+            min-height: 300px;
+            padding: 20px;
+            gap: 10px;
+            flex-wrap: wrap;
         }
+
+        header img {
+            height: 250px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        header img:first-child {
+            transform: scaleX(-1);
+        }
+
+        header > div {
+            flex: 1;
+            min-width: 250px;
+        }
+
         header span {
             font-size: 3.5em;
             font-weight: 700;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             animation: fadeInDown 0.8s ease;
+            display: block;
+            word-wrap: break-word;
         }
         
         .tagline {
@@ -261,38 +286,156 @@
             }
         }
 
-        /* MOBILE */
-        @media screen and (max-width: 750px) {
+        /* TABLET */
+        @media screen and (max-width: 850px) {
             header {
-                height: auto;
-                padding: 30px 0;
+                min-height: auto;
+                flex-direction: column;
+                padding: 20px 10px;
             }
+
+            header img {
+                height: 150px;
+                display: none;
+            }
+
+            header > div {
+                flex: 1;
+                min-width: auto;
+            }
+
             header span {
-                font-size: 5em;
-                font-weight: 700;
-                line-height: 1.2;
-                font-weight: 700;
+                font-size: 2em;
+                font-weight: 600;
+                margin-bottom: 15px;
             }
 
             .tagline {
-                font-size: 3em;
+                font-size: 1em;
+                margin: 10px 0;
             }
 
             .date-time {
-                font-size: 2.7em;
+                font-size: 0.9em;
+            }
+
+            .event-details {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+        }
+
+        /* MOBILE */
+        @media screen and (max-width: 480px) {
+            header {
+                padding: 15px 10px;
+            }
+
+            header span {
+                font-size: 1.5em;
+                font-weight: 600;
+                line-height: 1.3;
+                margin-bottom: 10px;
+            }
+
+            .tagline {
+                font-size: 0.9em;
+                margin: 8px 0;
+            }
+
+            .date-time {
+                font-size: 0.8em;
+            }
+
+            section {
+                padding: 15px;
+                margin-bottom: 15px;
+                border-radius: 8px;
+            }
+
+            h2 {
+                font-size: 1.4em;
+                margin-bottom: 15px;
+            }
+
+            .detail-item {
+                padding: 12px;
+                margin-bottom: 10px;
+            }
+
+            .detail-item strong {
+                font-size: 0.9em;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1em;
+                width: 100%;
+                text-align: center;
+            }
+
+            .faq-item {
+                padding: 12px;
+                margin: 15px 0;
+            }
+
+            .modal-content {
+                width: 95%;
+                padding: 20px;
+                margin: 20% auto;
+            }
+
+            .modal iframe {
+                height: 400px;
+            }
+
+            main {
+                margin: 20px auto;
+                padding: 0 10px;
+            }
+        }
+
+        /* EXTRA SMALL */
+        @media screen and (max-width: 375px) {
+            header span {
+                font-size: 1.3em;
+            }
+
+            .tagline {
+                font-size: 0.8em;
+            }
+
+            .date-time {
+                font-size: 0.75em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            section {
+                padding: 12px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="orchid-transparent.png" style="transform: scaleX(-1); position: relative; margin-left: -150px">
-        <div style="position: relative; margin-left: -100px; margin-right: -100px;">
+        <img src="orchid-transparent.png" alt="Orchid decoration">
+        <div>
             <span>Mariage de Patricia et Thibaut</span>
             <p class="tagline">Rejoignez-nous pour célébrer notre union !</p>
             <p class="date-time">Samedi 19 et dimanche 20 Septembre 2026</p>
         </div>
-        <img src="orchid-transparent.png" style="position: relative; margin-right: -150px">
+        <img src="orchid-transparent.png" alt="Orchid decoration">
     </header>
 
     <main>
@@ -373,7 +516,7 @@
                 <span class="close" onclick="closeRSVPModal()">&times;</span>
                 <h2>Forme de RSVP</h2>
             </div>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdho77N17rmX7WV5T4CNuJaskrXaOw4Fizza4PJrG9F3CZRWA/viewform?embedded=true" width="640" height="1275" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdho77N17rmX7WV5T4CNuJaskrXaOw4Fizza4PJrG9F3CZRWA/viewform?embedded=true" width="640" height="1275" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
         </div>
     </div>
 
