@@ -19,39 +19,6 @@
             min-height: 100vh;
         }
 
-        header {
-            background: white;
-            color: #841a21;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            overflow: hidden;
-            height: auto;
-            padding: 30px 0;
-            span {
-                font-size: 5em;
-                line-height: 1.2;
-                font-weight: 700;
-                margin-bottom: 20px;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-                animation: fadeInDown 0.8s ease;
-            }
-        }
-
-        .tagline {
-            font-size: 3em;
-            margin: 20px 0;
-            opacity: 0.95;
-            animation: fadeInUp 0.8s ease 0.2s both;
-        }
-
-        .date-time {
-            font-size: 2.7em;
-            animation: fadeInUp 0.8s ease 0.4s both;
-        }
-
         main {
             max-width: 900px;
             margin: 40px auto;
@@ -213,26 +180,59 @@
             border-radius: 8px;
         }
 
-        @media screen and (min-width: 750px) {
-            header {
-                height: 400px;
-                padding: 0;
-                span {
-                    font-size: 2.5em;
-                    font-weight: 600;
-                }
+        header {
+            background: white;
+            color: #841a21;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            height: 400px;
+            padding: 0;
+            span {
+                font-size: 2.5em;
+                font-weight: 600;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                animation: fadeInDown 0.8s ease;
             }
-            
-            .tagline {
-                font-size: 1.3em;
-            }
+        }
+        
+        .tagline {
+            font-size: 1.3em;
+            margin: 20px 0;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
 
-            .date-time {
-                font-size: 1.1em;
+        .date-time {
+            font-size: 1.1em;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        @media (max-width: 1082px) {
+        header {
+            height: auto;
+            padding: 30px 0;
+            span {
+                font-size: 5em;
+                line-height: 1.2;
+                font-weight: 700;
             }
         }
 
-        @media screen and (min-width: 1082px) {
+        .tagline {
+            font-size: 3em;
+        }
+
+        .date-time {
+            font-size: 2.7em;
+        }
+        }
+
+        @media (max-width: 750px) {
             header {
                 span {
                     font-size: 3.5em;
