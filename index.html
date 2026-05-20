@@ -26,6 +26,18 @@
             padding: 0;
             margin: 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            span {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                animation: fadeInDown 0.8s ease;
+            }
+        }
+
+        @media (min-width: 600px) {
+            header span {
+                font-size: 3.5em;
+            }
         }
 
         h1 {
@@ -276,7 +288,7 @@
         <div style="display: flex; justify-content: space-between; align-items: center; height: 400px; overflow: hidden;">
             <img src="orchid-transparent.png" style="transform: scaleX(-1); position: relative; margin-left: -150px">
             <div style="position: relative; margin-left: -100px; margin-right: -100px;">
-                <h1>Mariage de Patricia et Thibaut</h1>
+                <span>Mariage de Patricia et Thibaut</span>
                 <p class="tagline">Rejoignez-nous pour célébrer notre union !</p>
                 <p class="date-time">Samedi 19 et dimanche 20 Septembre 2026</p>
             </div>
