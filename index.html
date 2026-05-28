@@ -53,15 +53,15 @@
             margin: 20px 0;
         }
 
+        .map-container {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
         .detail-item {
             padding: 15px;
             background: #f8f9fa;
             border-left: 4px solid #bd2630;
-        }
-
-        .detail-map {
-            padding:15px;
-            background: #f8f9fa;
             border-radius: 4px;
         }
 
@@ -359,16 +359,8 @@
             <p>
                 Nous sommes heureux de vous inviter à partager ce moment de bonheur avec nous.
             </p>
-
-            <div class="event-details">
-                <div class="detail-item">
-                    <strong>Lieu de l'évènement</strong>
-                    Château des Creusettes<br>
-                    988 route de Villars les Dombes<br>
-                    01240 La Chapelle-du-Châtelard
-                </div>
                 <!-- Maps -->
-                <div class="detail-map">
+                <div class="map-container">
                     <iframe
                         id="map-iframe"
                         src="https://maps.google.com/maps?q=Chateau+des+Creusettes+La+Chapelle-du-Chatelard&output=embed"
@@ -378,6 +370,14 @@
                         allowfullscreen
                         loading="lazy">
                     </iframe>
+                </div>
+
+            <div class="event-details">
+                <div class="detail-item">
+                    <strong>Lieu de l'évènement</strong>
+                    Château des Creusettes<br>
+                    988 route de Villars les Dombes<br>
+                    01240 La Chapelle-du-Châtelard
                 </div>
                 <div class="detail-item">
                     <strong>Dress Code</strong>
