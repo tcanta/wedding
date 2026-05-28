@@ -171,12 +171,6 @@
             color: #bd2630;
         }
 
-        .modal-header {
-            margin-bottom: 20px;
-            border-bottom: 2px solid #bd2630;
-            padding-bottom: 10px;
-        }
-
         #rsvp-iframe {
             max-width: 100%;
             width: 100% !important;
@@ -361,23 +355,24 @@
                 Nous sommes heureux de vous inviter à partager ce moment de bonheur avec nous.
             </p>
 
-            <!-- Maps -->
-             <iframe
-                id="map-iframe"
-                src="https://maps.google.com/maps?q=Chateau+des+Creusettes+La+Chapelle-du-Chatelard&output=embed"
-                width="100%"
-                height="100%"
-                style="border: none; display: block;"
-                allowfullscreen
-                loading="lazy">
-            </iframe>
-            
             <div class="event-details">
                 <div class="detail-item">
                     <strong>Lieu de l'évènement</strong>
                     Château des Creusettes<br>
                     988 route de Villars les Dombes<br>
                     01240 La Chapelle-du-Châtelard
+                </div>
+                <!-- Maps -->
+                <div class="detail-item">
+                    <iframe
+                        id="map-iframe"
+                        src="https://maps.google.com/maps?q=Chateau+des+Creusettes+La+Chapelle-du-Chatelard&output=embed"
+                        width="100%"
+                        height="100%"
+                        style="border: none; display: block;"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
                 </div>
                 <div class="detail-item">
                     <strong>Dress Code</strong>
@@ -439,10 +434,8 @@
     <!-- RSVP Modal -->
     <div id="rsvpModal" class="modal">
         <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeRSVPModal()">&times;</span>
-                <h2>RSVP</h2>
-            </div>
+            <span class="close" onclick="closeRSVPModal()">&times;</span>
+            <h2>RSVP</h2>
             <iframe id="rsvp-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdho77N17rmX7WV5T4CNuJaskrXaOw4Fizza4PJrG9F3CZRWA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Chargement...</iframe>
         </div>
     </div>
