@@ -411,6 +411,14 @@
                 Si aucun plus un n'est précisé sur l'invitation, n'hésitez pas à en ajouter quand même.
             </p>
             <button class="cta-button" onclick="openRSVPModal()">Ouvrir le form de RSVP</button>
+
+            <br>
+            Si vous avez des problèmes d'affichage, vous pouvez aussi ouvrir le form ici :
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdho77N17rmX7WV5T4CNuJaskrXaOw4Fizza4PJrG9F3CZRWA/viewform" 
+                target="_blank" 
+                class="cta-button">
+                    Ouvrir le form de RSVP
+                </a>
         </section>
 
         <!-- FAQs Section -->
@@ -460,10 +468,12 @@
 
         function openRSVPModal() {
             modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         }
 
         function closeRSVPModal() {
             modal.style.display = 'none';
+            document.body.style.overflow = '';
         }
     </script>
 </body>
