@@ -186,6 +186,30 @@
             border: none;
             border-radius: 8px;
             overflow: visible;
+
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                border-radius: 10px;
+                background: transparent;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: linear-gradient(135deg, #bd2630 0%, #9963c4 100%);
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(135deg, #9963c4 0%, #bd2630 100%);
+            }
+
+            /* Firefox */
+            * {
+                scrollbar-width: thin;
+                scrollbar-color: #bd2630 transparent;
+            }
         }
 
         header {
@@ -252,8 +276,8 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #f1f1f1;
             border-radius: 10px;
+            background: transparent;
         }
 
         ::-webkit-scrollbar-thumb {
@@ -268,7 +292,7 @@
         /* Firefox */
         * {
             scrollbar-width: thin;
-            scrollbar-color: #bd2630 #f1f1f1;
+            scrollbar-color: #bd2630 transparent;
         }
 
         @keyframes fadeIn {
